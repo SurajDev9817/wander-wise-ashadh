@@ -1,0 +1,33 @@
+@baseUrl = http://localhost:3000
+@userId = 6a464b5556423fa6ad3e3ed7
+
+### TEST API
+GET {{baseUrl}}
+
+### CCREATE USER
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john.doe10@example.com",
+    "password": "test123"
+}
+
+#### GET ALL USERS
+GET {{baseUrl}}/users
+
+#### GET USER BY ID
+GET {{baseUrl}}/users/{{userId}}
+
+###UPDATE USER BY ID
+PATCH {{baseUrl}}/users/{{userId}}
+Content-Type: application/json
+
+{
+ "name": "John Doe Updated"
+}
+
+### DELETE USER BY ID
+
+DELETE {{baseUrl}}/users/{{userId}}
